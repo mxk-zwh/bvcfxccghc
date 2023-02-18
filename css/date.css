@@ -1,0 +1,16 @@
+.show {
+  color: white;
+  display: flex;
+  font: 23px Hei, Helvetica, Arial, sans-serif;
+  transform: translateY(58%);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.show .date {
+  display: flex;
+}
+
+.show .week {
+  display: flex;
+}
