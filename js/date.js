@@ -19,7 +19,7 @@ function startTime() {
     years + "年" + months + "月" + d + "日";
     document.querySelector(".week").innerHTML =
     w;
-  t = setTimeout("startTime()", 500);
+  t = setTimeout("startTime()", 1000);
 }
 function checkTime(i) {
   if (i < 10) {
