@@ -7,11 +7,6 @@
   flex-direction: column;
   align-items: center;
 }
-@media screen and (max-width:800px){
-  .show{
-    font: 48px Hei,Helvetica,Arial,sans-serif;
-  }
-}
 .show .date {
   display: flex;
 }
