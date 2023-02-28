@@ -7,6 +7,12 @@
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width:980px){
+  .show{
+    font: 48px Hei,Helvetica,Arial,sans-serif;
+    transform: translateY(80%);
+  }
+}
 .show .date {
   display: flex;
 }
