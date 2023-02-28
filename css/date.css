@@ -7,10 +7,9 @@
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width:980px){
+@media screen and (max-width:800px){
   .show{
     font: 48px Hei,Helvetica,Arial,sans-serif;
-    transform: translateY(80%);
   }
 }
 .show .date {
