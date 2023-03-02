@@ -6,6 +6,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  transition: all .3s;
 }
 .show .date {
   display: flex;
@@ -13,4 +14,16 @@
 
 .show .week {
   display: flex;
+}
+@media screen and (max-width:1000px){
+  .show {
+    color: rgb(255, 255, 255);
+    display: flex;
+    font: 51px Hei, Helvetica, Arial, sans-serif;
+    transform: translateY(265%);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s;
+  }
 }
