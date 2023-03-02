@@ -6,6 +6,7 @@ function startTime() {
   // add a zero in front of numbers<10
   months = months + 1;
   months = checkTime(months);
+  d = checkTime(d);
   var weekday = new Array(7);
   weekday[0] = "星期日";
   weekday[1] = "星期一";
