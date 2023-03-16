@@ -1,16 +1,30 @@
-// js获取路径下的所有文件名字
-function getFileNames(path) {
-    var files = [];
-    var file = new File([],fileName=path,{type: 'image/jpeg'});
-    if (file.isDirectory()) {
-        var files = file.listFiles();
-        for (var i = 0; i < files.length; i++) {
-            files[i] = files[i].getName();
-        }
+var filenames = new Array();
+
+$.ajax({
+    url: "./img",
+    success: function (data) {
+        $(data).find("a:contains(.jpg)").each(function () {
+            let tmp = $(this).attr("href");
+            let idx = tmp.lastIndexOf("/");
+            tmp = tmp.slice(idx + 1, tmp.length);
+            filenames.push(tmp)
+        });
+
+
+        var reg = /.*(?=\.jpg)/;
+        filenames.sort((x, y) => {
+            x = x.match(reg)[0];
+            y = y.match(reg)[0];
+
+        })
+        console.log(filenames)
+        var randomBgIndex = Math.round(Math.random() * (filenames.length-1));
+        console.log(randomBgIndex)
+        console.log()
+        var img=filenames[randomBgIndex]
+        $(".txbg").css("background-image", `url(./img/${img})`);
+
     }
-    return files;
-}
+});
 
-
-    
 
