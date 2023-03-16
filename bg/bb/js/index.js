@@ -4,7 +4,7 @@ var randomBgIndex = Math.round(Math.random() * (filenames.length - 1));
 console.log(randomBgIndex)
 console.log()
 var img = filenames[randomBgIndex]
-$(".txbg").css("background-image", `url(./img/${img})`);
+$(".txbg").css("background-image", `url(https://raw.iqiq.io/mxk-zwh/cccccc/master/bg/bb/img/${img})`);
 // $.ajax({
 //     url: "./img",
 //     success: function (data) {
