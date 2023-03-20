@@ -69,6 +69,7 @@ function autoResize(element, nativeSize) {
 var filenames = new Array();
 filenames=['20201224150150477.jpg', '20201224164832570.jpg', '20201224175019138.jpg', '20201224185910517.jpg', '20201224201748118.jpg', '20201224203052967.jpg', '20201224204302803.jpg', '20201224210829846.jpg']
 showimg()
+dir()
 function showimg() {
     var randomBgIndex = Math.round(Math.random() * (filenames.length - 1));
     console.log(randomBgIndex);
@@ -107,4 +108,14 @@ function imgname() {
 
         }
     });
+}
+function dir(){
+    console.group("bg:")
+    console.log("hxhbg:"+location.href+"bg/hxhbg")
+    console.log("lolibg:"+location.href+"bg/lollibg" )
+    console.log("sanqiu:"+location.href+"bg/sanqiu")
+    console.log("txbg:"+location.href+"bg/txbg")
+    console.log("yinghua:"+location.href+"bg/yinghua")
+    console.log("ymjbg:"+location.href+"bg/yinghua")
+    console.groupEnd();
 }
