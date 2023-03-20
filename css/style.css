@@ -12,7 +12,7 @@ body {
 .bg{
     width: 100%;
     height: 100%;
-    background: url(https://www.loliapi.com/acg/) no-repeat;
+    background: no-repeat;
     background-size: cover;
     opacity: .5;
     position: fixed;
