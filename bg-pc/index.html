@@ -40,12 +40,7 @@
       a:hover {
         box-shadow: inset -1px 5px 17px rgb(232 65 65 / 37%);
       }
-      button {
-        background-color: azure;
-        border-radius: 50%;
-        font-size: larger;
-        padding: 9px;
-      }
+    
     </style>
   </head>
 
@@ -58,15 +53,13 @@
         <li><a href="./txbg/">txbg</a></li>
         <li><a href="./yinghua/">yinghua</a></li>
         <li><a href="./ymjbg/">ymjbg</a></li>
-        <li>
-          <button class="dark">💫</button>
-        </li>
+      
       </ul>
     </div>
-<script src="../js/jquery.min.js"></script>
-    <script>
-      var flag=true;
-      $(".dark").click(function(){!flag?$("body").css('background-color',''):$("body").css('background-color','#212529');flag=!flag;})
-    </script>
+<script src="https://cdn.bootcss.com/Darkmode.js/1.4.0/darkmode-js.js"></script>
+<script>
+  
+   new Darkmode().showWidget();
+   </script>
   </body>
 </html>
