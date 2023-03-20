@@ -1,5 +1,5 @@
 # cccccc
-wallpaper engine
+wallpaper
 
 ## 打开壁纸
 ![image](https://user-images.githubusercontent.com/72368111/225669819-f49e02d1-dbd2-4ad0-9c59-0287232f2397.png)
