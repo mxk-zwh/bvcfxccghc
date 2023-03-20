@@ -110,12 +110,7 @@ function imgname() {
     });
 }
 function dir(){
-    console.group("bg:")
-    console.log("hxhbg:"+location.href+"bg/hxhbg")
-    console.log("lolibg:"+location.href+"bg/lollibg" )
-    console.log("sanqiu:"+location.href+"bg/sanqiu")
-    console.log("txbg:"+location.href+"bg/txbg")
-    console.log("yinghua:"+location.href+"bg/yinghua")
-    console.log("ymjbg:"+location.href+"bg/yinghua")
+    console.group("bgnav:")
+    console.log(location.href+"bg-pc/")
     console.groupEnd();
 }
