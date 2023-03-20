@@ -7,7 +7,7 @@ $.ajax({
         flag = data.success;
         imgurl = data.imgurl;
         if (flag == true) {
-            $(".bg").css("background-image", imgurl);
+            $(".bg").css("background-image", `url(${imgurl})`);
         } 
     },
     error:function(){
