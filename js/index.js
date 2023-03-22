@@ -76,7 +76,7 @@ function showimg() {
     console.log();
     var img = filenames[randomBgIndex];
     //图片在github中cdn随机取出
-    $(".bg").css("background-image", `url(https://cdn.jsdelivr.ren/gh/mxk-zwh/cccccc@master/img/${img})`);
+    $(".bg").css("background-image", `url(${location.href.match(/([\w\W]+)\//)[1]}/img/${img})`);
 }
 // imgname()
 //getimgnameinliveserver
@@ -104,13 +104,17 @@ function imgname() {
             console.log(randomBgIndex)
             console.log()
             var img = filenames[randomBgIndex]
-            $(".txbg").css("background-image", `url(./img/${img})`);
+            //github
+            // $(".bg").css("background-image", `url(${location.href}img/${img})`);
+            //本地
+            // $(".bg").css("background-image", `url(${location.href.match(/([\w\W]+)\//)[1]}/img/${img})`);
 
         }
     });
 }
 function dir(){
     console.group("bgnav:")
-    console.log(location.href+"bg-pc/")
+    console.log(location.href.match(/([\w\W]+)\//)[1]+"/bg-pc/")
+    // console.log(location.href+"bg-pc/")
     console.groupEnd();
 }
