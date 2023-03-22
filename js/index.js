@@ -76,7 +76,8 @@ function showimg() {
     console.log();
     var img = filenames[randomBgIndex];
     //图片在github中cdn随机取出
-    $(".bg").css("background-image", `url(${location.href.match(/([\w\W]+)\//)[1]}/img/${img})`);
+    $(".bg").css("background-image", `url(https://cdn.jsdelivr.ren/gh/mxk-zwh/cccccc@master/img/${img})`);
+    // $(".bg").css("background-image", `url(${location.href.match(/([\w\W]+)\//)[1]}/img/${img})`);
 }
 // imgname()
 //getimgnameinliveserver
