@@ -11,12 +11,63 @@
         text-decoration: dotted;
         list-style: none;
       }
-      .nav {
+      a{
+        border-radius: 8rem;
+      }
+
+      body{
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="cover">
+        <div class="cover-main">
+          <p>
+            <img src="./doge.png" alt="">
+          </p>
+          <p>
+            <a href="./#map">START</a>
+          </p>
+        </div>
+    </section>
+    <style>
+      .cover{
+        height: 100vh;
+        display: flex;
+        background: linear-gradient(to left bottom,rgb(255, 189, 179),rgb(179, 217, 255) 100%);
+        align-items: center;
+      }
+      .cover p{
+        line-height: 1.5rem;
+        margin: 1em 0;
+      }
+      .cover .cover-main{
+        flex: 1;
+        text-align: center;
+        margin: -20px 16px 0;
+      }
+      .cover .cover-main a{
+        border: 1px solid #42b983;
+        background-color: #42b983;
+        color: #fff;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 1.05rem;
+        letter-spacing: .1rem;
+        margin: .5rem 1rem;
+        padding: .75rem 2rem;
+        transition: all .15s ease;
+      }
+      .nav{
+        height: 100vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
       }
-      ul {
+      .nav ul {
         display: flex;
         width: 100%;
         margin: 0px;
@@ -25,41 +76,43 @@
         flex-direction: column;
         justify-content: center;
       }
-      li {
+      .nav ul li {
         padding-right: 0.2rem;
         text-align: center;
       }
-      a {
+      .nav ul li a {
         color: #e97588;
         padding: 0.8rem 0.9rem;
         font-size: 1.2rem;
         font-weight: 800;
         /* background-color: pink; */
         border: 0.3rem solid #e97588;
-        border-radius: 8rem;
+        
         transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s;
       }
-      a:hover {
+      .nav ul li a:hover {
         box-shadow: inset -1px 5px 17px rgb(232 65 65 / 37%);
       }
     </style>
-  </head>
-
-  <body>
     <div class="nav">
-      <ul>
-        <li><a href="./hxhbg/">hxhbg</a></li>
+      <ul >
+        <li><a href="./hxhbg/" name="map">hxhbg</a></li>
         <li><a href="./lollibg/">lollibg</a></li>
         <li><a href="./sanqiu/">sanqiu</a></li>
         <li><a href="./txbg/">txbg</a></li>
         <li><a href="./yinghua/">yinghua</a></li>
         <li><a href="./ymjbg/">ymjbg</a></li>
-        <li><a href="./xiaowai/">xiaowai</a></li>
+        <li><a href="./xiaowai/" >xiaowai</a></li>
       </ul>
-    </div>
+    </div >
     <script src="https://cdn.bootcss.com/Darkmode.js/1.4.0/darkmode-js.js"></script>
     <script>
       new Darkmode().showWidget();
     </script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  
+    <script type="text/javascript">  
+    document.write(returnCitySN["cip"]+','+returnCitySN["cname"])  
+    </script>
+
   </body>
 </html>
