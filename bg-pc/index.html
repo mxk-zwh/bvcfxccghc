@@ -5,110 +5,357 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>bgmap</title>
+    <link rel="stylesheet" href="./xxx/boot.css" />
     <style>
       a,
       li {
-        text-decoration: dotted;
+        text-decoration: none;
         list-style: none;
       }
-      a{
+      a {
         border-radius: 8rem;
       }
 
-      body{
+      body {
         margin: 0;
         padding: 0;
+      }
+      img {
+        object-fit: cover;
       }
     </style>
   </head>
 
   <body>
+    <a href="" name="home"></a>
     <section class="cover">
-        <div class="cover-main">
-          <p>
-            <img src="./doge.png" alt="">
-          </p>
-          <p>
-            <a href="./#map">START</a>
-          </p>
-        </div>
+      <div class="cover-main">
+        <p>
+          <img src="./xxx/doge.png" alt="" />
+        </p>
+        <p>
+          <a href="./#map">START</a>
+        </p>
+      </div>
     </section>
     <style>
-      .cover{
+      .cover {
         height: 100vh;
         display: flex;
-        background: linear-gradient(to left bottom,rgb(255, 189, 179),rgb(179, 217, 255) 100%);
+        background: linear-gradient(
+          to left bottom,
+          rgb(255, 189, 179),
+          rgb(179, 217, 255) 100%
+        );
         align-items: center;
       }
-      .cover p{
+      .cover p {
         line-height: 1.5rem;
         margin: 1em 0;
       }
-      .cover .cover-main{
+      .cover .cover-main {
         flex: 1;
         text-align: center;
         margin: -20px 16px 0;
       }
-      .cover .cover-main a{
+      .cover .cover-main a {
         border: 1px solid #42b983;
         background-color: #42b983;
         color: #fff;
         box-sizing: border-box;
         display: inline-block;
         font-size: 1.05rem;
-        letter-spacing: .1rem;
-        margin: .5rem 1rem;
-        padding: .75rem 2rem;
-        transition: all .15s ease;
+        letter-spacing: 0.1rem;
+        margin: 0.5rem 1rem;
+        padding: 0.75rem 2rem;
+        transition: all 0.15s ease;
       }
-      .nav{
-        height: 100vh;
-        display: flex;
+      .nav {
+        height: 100%;
         flex-wrap: wrap;
-        justify-content: center;
-      }
-      .nav ul {
         display: flex;
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-        line-height: 4;
-        flex-direction: column;
-        justify-content: center;
+        width: 90%;
+        margin: 40px;
+        padding: 40px;
+        line-height: 8;
       }
-      .nav ul li {
-        padding-right: 0.2rem;
-        text-align: center;
-      }
-      .nav ul li a {
-        color: #e97588;
+      .nav a {
+        color: #f373de;
         padding: 0.8rem 0.9rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        display: inline-block;
+        text-transform: uppercase;
         font-weight: 800;
-        /* background-color: pink; */
-        border: 0.3rem solid #e97588;
-        
+        background-color: white;
+        border: 0.3rem solid #f1eeef;
+        line-height: 1;
+        width: 120px;
         transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.3s;
       }
-      .nav ul li a:hover {
-        box-shadow: inset -1px 5px 17px rgb(232 65 65 / 37%);
+      .nav a:hover {
+        color: #ffffff;
+        background-color: #eda407;
+        border-color: #eda407;
       }
     </style>
-    <div class="nav">
-      <ul >
-        <li><a href="./hxhbg/" name="map">hxhbg</a></li>
-        <li><a href="./lollibg/">lollibg</a></li>
-        <li><a href="./sanqiu/">sanqiu</a></li>
-        <li><a href="./txbg/">txbg</a></li>
-        <li><a href="./yinghua/">yinghua</a></li>
-        <li><a href="./ymjbg/">ymjbg</a></li>
-        <li><a href="./xiaowai/" >xiaowai</a></li>
-      </ul>
-    </div >
+
+    <style>
+      .desktop .oh-desktop {
+        overflow: hidden;
+      }
+      .product-2 .unit {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: -16px;
+        margin-left: -20px;
+      }
+      .product-2 .unit > * {
+        margin: 63px;
+      }
+      .unit-left {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+      .unit-body {
+        flex: 0 1 auto;
+      }
+      .product-figure {
+        position: relative;
+        max-width: none;
+        overflow: hidden;
+        background: #f1efeb;
+        transition: all 0.3s ease;
+      }
+      .product-figure img {
+        width: 250px;
+        height: 250px;
+      }
+      .product-figure::before {
+        position: absolute;
+        text-align: center;
+        content: "";
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        background-color: rgba(17, 17, 17, 0.39);
+        pointer-events: none;
+        z-index: 1;
+      }
+      .product-figure:hover:before {
+        left: 10px;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        opacity: 1;
+        visibility: visible;
+      }
+      .product-figure .product-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      .product-figure:hover .product-button {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+    <div class="row row-30 justify-content-center">
+      <div class="nav">
+        <div class="col-sm-4 col-md-12 col-lg-4">
+          <div class="oh-desktop">
+            <!-- Product-->
+            <article
+              class="product product-2 box-ordered-item wow slideInRight"
+              data-wow-delay="0s"
+              style="
+                visibility: visible;
+                animation-delay: 0s;
+                animation-name: slideInRight;
+              "
+            >
+              <div class="unit flex-row flex-lg-column">
+                <div class="unit-left">
+                  <div class="product-figure">
+                    <img src="../img/20201224150150477.jpg" alt="" />
+                    <div class="product-button">
+                      <a href="./hxhbg/" name="map">hxhbg</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-12 col-lg-4">
+          <div class="oh-desktop">
+            <!-- Product-->
+            <article
+              class="product product-2 box-ordered-item wow slideInRight"
+              data-wow-delay="0s"
+              style="
+                visibility: visible;
+                animation-delay: 0s;
+                animation-name: slideInRight;
+              "
+            >
+              <div class="unit flex-row flex-lg-column">
+                <div class="unit-left">
+                  <div class="product-figure">
+                    <img src="../img/20201224204302803.jpg" alt="" />
+                    <div class="product-button">
+                      <a href="./lollibg/">lollibg</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-12 col-lg-4">
+          <div class="oh-desktop">
+            <!-- Product-->
+            <article
+              class="product product-2 box-ordered-item wow slideInRight"
+              data-wow-delay="0s"
+              style="
+                visibility: visible;
+                animation-delay: 0s;
+                animation-name: slideInRight;
+              "
+            >
+              <div class="unit flex-row flex-lg-column">
+                <div class="unit-left">
+                  <div class="product-figure">
+                    <img src="../img/20230222120332113.jpg" alt="" />
+                    <div class="product-button">
+                      <a href="./sanqiu/">sanqiu</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-12 col-lg-4">
+          <div class="oh-desktop">
+            <!-- Product-->
+            <article
+              class="product product-2 box-ordered-item wow slideInRight"
+              data-wow-delay="0s"
+              style="
+                visibility: visible;
+                animation-delay: 0s;
+                animation-name: slideInRight;
+              "
+            >
+              <div class="unit flex-row flex-lg-column">
+                <div class="unit-left">
+                  <div class="product-figure">
+                    <img src="../img/20230222120332113.jpg" alt="" />
+                    <div class="product-button">
+                      <a href="./txbg/">txbg</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-12 col-lg-4">
+          <div class="oh-desktop">
+            <!-- Product-->
+            <article
+              class="product product-2 box-ordered-item wow slideInRight"
+              data-wow-delay="0s"
+              style="
+                visibility: visible;
+                animation-delay: 0s;
+                animation-name: slideInRight;
+              "
+            >
+              <div class="unit flex-row flex-lg-column">
+                <div class="unit-left">
+                  <div class="product-figure">
+                    <img src="../img/20201224210829846.jpg" alt="" />
+                    <div class="product-button">
+                      <a href="./yinghua/">yinghua</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-12 col-lg-4">
+          <div class="oh-desktop">
+            <!-- Product-->
+            <article
+              class="product product-2 box-ordered-item wow slideInLeft"
+              data-wow-delay="0s"
+              style="
+                visibility: visible;
+                animation-delay: 0s;
+                animation-name: slideInLeft;
+              "
+            >
+              <div class="unit flex-row flex-lg-column">
+                <div class="unit-left">
+                  <div class="product-figure">
+                    <img src="../img/20201224201748118.jpg" alt="" />
+                    <div class="product-button">
+                      <a href="./ymjbg/">ymjbg</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-12 col-lg-4">
+          <div class="oh-desktop">
+            <!-- Product-->
+            <article
+              class="product product-2 box-ordered-item wow slideInLeft"
+              data-wow-delay="0s"
+              style="
+                visibility: visible;
+                animation-delay: 0s;
+                animation-name: slideInLeft;
+              "
+            >
+              <div class="unit flex-row flex-lg-column">
+                <div class="unit-left">
+                  <div class="product-figure">
+                    <img src="../img/20201224175019138.jpg" alt="" />
+                    <div class="product-button">
+                      <a href="./xiaowai/">xiaowai</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.bootcss.com/Darkmode.js/1.4.0/darkmode-js.js"></script>
     <script>
       new Darkmode().showWidget();
     </script>
-
   </body>
 </html>
