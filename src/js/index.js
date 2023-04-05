@@ -1,3 +1,16 @@
+var filenames = new Array();
+filenames=['20201224150150477.jpg', '20201224164832570.jpg', '20201224175019138.jpg', '20201224185910517.jpg', '20201224201748118.jpg', '20201224203052967.jpg', '20201224204302803.jpg', '20201224210829846.jpg','989645.jpg','710sa7126v3uaelqm270ym75coa97nr.jpg']
+showimg()
+dir()
+function showimg() {
+    var randomBgIndex = Math.round(Math.random() * (filenames.length - 1));
+    console.log(randomBgIndex);
+    console.log();
+    var img = filenames[randomBgIndex];
+    //图片在github中cdn随机取出
+    $(".bg").css("background-image", `url(https://cdn.jsdelivr.ren/gh/mxk-zwh/cccccc@master/img/${img})`);
+    // $(".bg").css("background-image", `url(${location.href.match(/([\w\W]+)\//)[1]}/img/${img})`);
+}
 var clock = document.querySelector('#utility-clock')
 utilityClock(clock)
 
@@ -66,19 +79,7 @@ function autoResize(element, nativeSize) {
     window.addEventListener('resize', update)
 }
 
-var filenames = new Array();
-filenames=['20201224150150477.jpg', '20201224164832570.jpg', '20201224175019138.jpg', '20201224185910517.jpg', '20201224201748118.jpg', '20201224203052967.jpg', '20201224204302803.jpg', '20201224210829846.jpg','989645.jpg']
-showimg()
-dir()
-function showimg() {
-    var randomBgIndex = Math.round(Math.random() * (filenames.length - 1));
-    console.log(randomBgIndex);
-    console.log();
-    var img = filenames[randomBgIndex];
-    //图片在github中cdn随机取出
-    $(".bg").css("background-image", `url(https://cdn.jsdelivr.ren/gh/mxk-zwh/cccccc@master/img/${img})`);
-    // $(".bg").css("background-image", `url(${location.href.match(/([\w\W]+)\//)[1]}/img/${img})`);
-}
+
 // imgname()
 //getimgnameinliveserver
 function imgname() {

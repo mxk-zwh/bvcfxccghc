@@ -1,11 +1,16 @@
 function startTime() {
   var today = new Date();
+  var hour=today.getHours();
+  var minute=today.getMinutes();
+  var second=today.getSeconds();
   var years = today.getFullYear();
   var months = today.getMonth();
   var d = today.getDate();
   // add a zero in front of numbers<10
   months = months + 1;
   months = checkTime(months);
+  minute = checkTime(minute);
+  second = checkTime(second);
   d = checkTime(d);
   var weekday = new Array(7);
   weekday[0] = "星期日";
@@ -20,7 +25,9 @@ function startTime() {
     years + "年" + months + "月" + d + "日";
     document.querySelector(".week").innerHTML =
     w;
-  t = setTimeout("startTime()", 1000);
+    document.querySelector('.time').innerHTML =
+    hour+":"+minute+":"+second;
+  t = setTimeout("startTime()", 800);
 }
 function checkTime(i) {
   if (i < 10) {
